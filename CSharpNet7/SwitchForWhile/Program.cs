@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections;
+using System.Text;
 
 Console.InputEncoding = Encoding.Unicode;
 Console.OutputEncoding = Encoding.Unicode;
@@ -39,3 +40,17 @@ Console.WriteLine(
     }
     ) ;
 ;
+// foreach khoong dung bien dem 
+string[] arrs = { "khai", "tin", "tuan anh", "nam", "thien" };
+foreach (var t  in arrs)
+{
+    Console.WriteLine(t);
+}
+
+IEnumerator e= 
+    arrs.GetEnumerator();
+while (e.MoveNext())
+{ 
+    string s=e.Current.ToString();
+    Console.WriteLine(s);
+}
