@@ -11,18 +11,20 @@ List<Student> list = new()
 
 };
 // duyet qu list bang vong lap foreach
-foreach(var stu in list)
-{
-    Console.WriteLine(stu);
-}
-//vong lap foreach se chuyen thanh 
-//IEnumerable<Student> enu = list.GetEnumerator();
-//while(enu.MoveNext())
+//foreach(var stu in list)
 //{
-//    Console.WriteLine(enu.Current.ToString());
+//    Console.WriteLine(stu);
 //}
+//vong lap foreach se chuyen thanh 
+IEnumerator<Student> enu = list.GetEnumerator();
+
+while(enu.MoveNext())
+{
+    Console.WriteLine(enu.Current.ToString());
+}
+
 //duyet qua list
-list.ForEach(stu => Console.WriteLine(stu));
+//list.ForEach(stu => Console.WriteLine(stu));
 
 //linq= language intergrated query
 //linq to sql =>  website thay the cu phap sql trong c#
