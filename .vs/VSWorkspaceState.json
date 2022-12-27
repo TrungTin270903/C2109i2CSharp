@@ -3,8 +3,9 @@
     "",
     "\\CSharpNet7",
     "\\CSharpNet7\\OopEncapsulationCont",
+    "\\CSharpNet7\\OopPolymorphismOverloading",
     "\\CSharpNet7\\QuestionMark"
   ],
-  "SelectedNode": "\\CSharpNet7\\CSharpNet7.sln",
+  "SelectedNode": "\\CSharpNet7\\OopPolymorphismOverloading\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

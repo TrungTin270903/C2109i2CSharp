@@ -70,4 +70,60 @@ while(enu.MoveNext())
 //    Console.WriteLine(i);
 //}
 //ket hop foreach cua list
-list.Where(stu => stu.Id > 2).ToList().ForEach(Console.WriteLine);
+//list.Where(stu => stu.Id > 2)
+//    .ToList()
+//    .ForEach(Console.WriteLine);
+
+//var t= from stu in list
+//       select stu;
+//IEnumerable<Student> i= from stu in list 
+//                        select stu;
+//với linq to object 
+//khi sd query syntax hay method syntax thì trả về ko phải là list , hay array =>
+//IEnumerable (con của IEnumarator)
+//duyệt qua collection :list, array,dictionary, hashmap...)dùng để duyệt qua linq to object.
+
+//list.ForEach(Console.WriteLine);    
+
+//t.ToList().ForEach(Console.WriteLine);
+
+//câu lệnh for
+//foreach(var stu in list)
+//{
+//    if (stu.Id > 2)
+//    {
+//        Console.WriteLine(stu);
+//    }
+//}
+//==== như nhau 
+
+//phuong thuc la lamda
+//list.ForEach(
+//    stu =>
+//    {
+//        if (stu.Id > 2)
+//        {
+//            Console.WriteLine(stu);
+//        }
+
+//    });
+//linq, method syntax
+//list.Where(stu => stu.Id>2).ToList().ForEach(Console.WriteLine);
+
+// query syntax
+//var t = from stu in list
+//        where stu.Id > 2
+//        select stu; 
+//t.ToList().ForEach(Console.WriteLine);
+
+// lấy thuộc tính từ sinh viên như câu select lấy các cột
+
+var t = from stu in list
+       where stu.Id > 2
+       select new
+       {
+           Indo= $"{stu.Id}:{stu.Name}",    
+           Birthday=stu.Dob
+       };
+//t.ToList().ForEach(i=>Console.WriteLine(i.Birthday));
+t.ToList().ForEach(Console.WriteLine);
